@@ -1,0 +1,256 @@
+/*全局样式
+---------------------------------*/
+
+body{
+    color: #333;
+    font-weight: 400;
+    font-family: Arial, Helvetica, Microsoft Yahei;
+    line-height: 1.8;
+    background: #fff;
+}
+
+/*标题*/
+h1, h2, h3, h4, h5, h6{
+    margin: 1.25em 0 .5em;
+    color: #222;
+    font-weight: normal;
+    font-family: "Yanone Kaffeesatz", "Microsoft YaHei Light", Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+}
+h1{
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+h2{
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+h4{
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+h5{
+    font-size: 11px;
+    font-size: 1.1rem;
+}
+h6{
+    font-size: 10px;
+    font-size: 1rem;
+}
+
+/*链接*/
+a{
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.14s ease 0s;
+        -moz-transition: all 0.14s ease 0s;
+           -o-transition: all 0.14s ease 0s;
+}
+
+a:hover,
+a:focus,
+a:active{
+    color: #333;
+    text-decoration: none;
+}
+
+/*文章元素*/
+blockquote p{
+    line-height: 1.6;
+}
+dd{
+    margin-bottom: 1em;
+}
+
+/*表单*/
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input{
+    color: #333;
+    line-height: 26px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+textarea{
+    width: 80%;
+    height: auto;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus{
+    outline: 0;
+    /* IE6-9 */
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    text-transform: uppercase;
+    background: #060608;
+    border: 1px solid #060608;
+}
+button:hover,
+a.button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover{
+    background: #ff2828;
+    border-color: #ff2828;
+}
+input, button{
+    margin: 0;
+    padding: 0;
+}
+
+/*表格*/
+table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+table th,
+table td{
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+table th{
+    font-weight: bold;
+}
+table thead th{
+    vertical-align: bottom;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td{
+    border-top: 0;
+}
+table tbody + tbody{
+    border-top: 2px solid #ddd;
+}
+
+/*对齐*/
+.alignleft{
+    display: inline;
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+}
+.alignright{
+    display: inline;
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+}
+.aligncenter{
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+/*清除*/
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix{
+    display: inline-block;
+}
+* html .clearfix{
+    height: 1%;
+}
+*:first-child+html .clearfix{
+    min-height: 1px;
+}
+.clearfix{
+    display: block;
+}
+.clear{
+    clear: both;
+}
+
+/*按钮*/
+.btn{
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    border:0;
+    background-image:none;
+    text-shadow:none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+.btn-primary{
+    background-color:#3f9fdb;
+}
+.btn-primary:hover{
+    background-color:#24a259;
+}
+
+ul li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 980px;
+    padding: 0px;
+}
+.content-container{
+    width: 680px;
+    margin: 0 auto;
+    padding: 0px;
+}
+.col-md-8{
+    padding-left: 0;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人资料</title>
+
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{% static 'hplus/css/bootstrap.min14ed.css' %}" rel="stylesheet">
+    <link href="{% static 'hplus/css/font-awesome.min93e3.css' %}" rel="stylesheet">
+    <link href="{% static 'hplus/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'hplus/css/style.min862f.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row animated fadeInRight">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>用户信息</h5>
+                    </div>
+                    <div>
+                        <div class="ibox-content no-padding border-left-right">
+                            <img alt="image" class="img-responsive" src="{% static 'hplus/img/profile_big.jpg' %}">
+                        </div>
+                        <div class="ibox-content profile-content">
+                            <h4><strong>{{ username }}</strong></h4>
+                            <p><i class="fa fa-map-marker"></i> 广州市广州大学城</p>
+                            <h5>
+                                    关于我
+                                </h5>
+                            <p>
+                                专注于服务端开发，会点前端，对大数据/云计算感兴趣，目前在深圳某企业实习。
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                        <form method="post" action="/chat/change_pass/">
+                            <p></p>
+                            <h4 class="no-margins">修改密码</h4>
+                            <p></p>
+                            <p></p>
+                            <input type="hidden" name="username" value="{{ username }}">
+                            <p></p>
+                            <p></p>
+                            <input type="password" name="oldpassword" required oninvalid="setCustomValidity('该字段不能为空')" oninput="setCustomValidity('')" class="form-control pword m-b" placeholder="请输入原密码" />
+                            <p></p>
+                            <p></p>
+                            <input type="password" name="newpassword" required oninvalid="setCustomValidity('该字段不能为空')" oninput="setCustomValidity('')" class="form-control pword m-b" placeholder="请输入新密码" />
+                            <p></p>
+                            <p></p>
+                            <button type="submit" class="btn btn-success btn-block">确认修改</button>
+                        </form>
+                       <script type="text/javascript">
+                            if ({{ success }}==1)
+                                alert("密码修改成功！");
+                            else if({{ success }}==0)
+                                alert("请输入正确的密码！");
+                        </script>
+
+                     </div>
+
+        </div>
+    </div>
+    <script src="{% static 'hplus/js/jquery.min.js' %}"></script>
+    <script src="{% static 'hplus/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'hplus/js/content.min.js' %}"></script>
+    <script src="{% static 'hplus/js/plugins/peity/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'hplus/js/demo/peity-demo.min.js' %}"></script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+</body>
+
+
+</html>
