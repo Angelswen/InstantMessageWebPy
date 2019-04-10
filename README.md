@@ -31,4 +31,5 @@ PyCharm2018、MySQL5.6、Redis3.2、Python3.6、Django1.11
 
 
 **更新**：
+
 更新了requirement.txt文件，导入项目依赖包时可以根据该文件选择导入
